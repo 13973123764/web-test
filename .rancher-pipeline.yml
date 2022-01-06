@@ -1,2 +1,13 @@
+stages:
+- name: mvn clean install
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: mvn clean install
+- name: build
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: jar -jar /app.jar
 timeout: 60
 notification: {}
