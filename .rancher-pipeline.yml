@@ -7,7 +7,7 @@ stages:
 - name: build
   steps:
   - runScriptConfig:
-      image: java:8
+      image: maven:3.8.4-openjdk-8
       shellScript: jar -jar /app.jar
 timeout: 60
 notification: {}
